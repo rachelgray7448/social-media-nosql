@@ -1,0 +1,23 @@
+{
+  "name": "social-media-nosql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rachelgray7448/social-media-nosql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rachelgray7448/social-media-nosql/issues"
+  },
+  "homepage": "https://github.com/rachelgray7448/social-media-nosql#readme",
+  "dependencies": {
+    "mongoose": "^6.3.6"
+  }
+}
