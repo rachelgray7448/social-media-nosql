@@ -15,18 +15,20 @@ const UserSchema = new Schema(
             unique: true,
             match: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/]
         },
-        thoughts: {
-            //array of _id values referencing thought model
+        thoughts: { 
+            type: Schema.Types.ObjectId,
+            ref: 'Thought'
         },
         friends: {
-            //array of _id values referencing the User model (self-reference)
+            type: Schema.Types.ObjectId,
+            ref: 'User'
         }
     }
 );
 
-// does this go here?
+
 UserSchema.virtual('friendCount').get(function() {
-    return // returns length of the users friends array field on query
+    return this.friends.length
 })
 
 const User = model('User', UserSchema);
